@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "plugin:best-bpm-modeler/all"
+  ],
+  "rules": {
+  }
+}

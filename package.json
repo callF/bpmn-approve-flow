@@ -1,0 +1,71 @@
+{
+  "name": "yggl",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env UMI_ENV=dev umi dev",
+    "build": "cross-env UMI_ENV=prod umi build",
+    "gPage": "umi g page /pageName/index --typescript"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js?(x)": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint --fix"
+    ],
+    "*.{less,css}": [
+      "prettier --parser --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-layout": "^6.5.0",
+    "@szsk/utils": "^0.0.19",
+    "bpmn-js": "^8.10.0",
+    "bpmn-js-bpmnlint": "^0.18.0",
+    "bpmn-js-properties-panel": "^0.46.0",
+    "bpmnlint": "^7.5.0",
+    "bpmnlint-loader": "^0.1.5",
+    "bpmnlint-plugin-best-bpm-modeler": "file:./plugin",
+    "diagram-js": "^8.1.2",
+    "diagram-js-minimap": "^2.1.1",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "umi": "^3.5.17"
+  },
+  "devDependencies": {
+    "@types/antd": "^1.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "@umijs/preset-react": "1.x",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}
