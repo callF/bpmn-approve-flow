@@ -124,7 +124,7 @@ export default function Container({ children }: IProps) {
   return (
     <ConfigProvider>
       <BasicLayout
-        logo={getLogo()}
+        // logo={getLogo()}
         location={{
           pathname,
         }}
